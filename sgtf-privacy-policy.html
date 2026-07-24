@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="《铁幕塔防》Google Play 版隐私政策 / Privacy Policy for Iron Curtain Defense">
+  <meta name="robots" content="index,follow">
+  <title>隐私政策｜铁幕塔防</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f1e8;
+      --surface: #fffdf8;
+      --text: #2c2520;
+      --muted: #6f6259;
+      --line: #d8cbbd;
+      --accent: #9f352a;
+      --accent-soft: #f5dfda;
+      --warning: #7a4b00;
+      --warning-bg: #fff0ca;
+      --link: #8d2f26;
+      --shadow: 0 16px 50px rgb(56 36 22 / 10%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #171210;
+        --surface: #231f1c;
+        --text: #ebe0dc;
+        --muted: #c6b8b0;
+        --line: #59413e;
+        --accent: #ffb4a9;
+        --accent-soft: #462723;
+        --warning: #ffdf98;
+        --warning-bg: #3f310d;
+        --link: #ffb4a9;
+        --shadow: 0 16px 50px rgb(0 0 0 / 28%);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 15% 0%, rgb(159 53 42 / 8%), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--link);
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    .page {
+      width: min(960px, calc(100% - 32px));
+      margin: 36px auto 72px;
+    }
+
+    .hero,
+    .content {
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 96%, transparent);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: clamp(28px, 5vw, 56px);
+      border-radius: 18px 18px 0 0;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 750;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+      line-height: 1.3;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      letter-spacing: 0.04em;
+    }
+
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .notice {
+      margin-top: 24px;
+      padding: 14px 16px;
+      border: 1px solid color-mix(in srgb, var(--warning) 45%, transparent);
+      border-radius: 10px;
+      background: var(--warning-bg);
+      color: var(--warning);
+    }
+
+    .notice strong {
+      display: block;
+    }
+
+    .content {
+      padding: clamp(24px, 5vw, 54px);
+      border-top: 0;
+      border-radius: 0 0 18px 18px;
+    }
+
+    .toc {
+      margin: 0 0 42px;
+      padding: 20px 24px;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .toc h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .toc ol {
+      columns: 2;
+      margin-bottom: 0;
+      padding-left: 1.3rem;
+    }
+
+    section {
+      scroll-margin-top: 24px;
+      margin-top: 44px;
+    }
+
+    section:first-of-type {
+      margin-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(1.35rem, 3vw, 1.75rem);
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.08rem;
+    }
+
+    p,
+    ul {
+      margin-top: 0;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 20px 0 0;
+    }
+
+    .summary article {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--surface) 88%, var(--accent-soft));
+    }
+
+    .summary h3 {
+      margin: 0 0 4px;
+      color: var(--accent);
+      font-family: inherit;
+      font-size: 0.86rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .summary p {
+      margin: 0;
+    }
+
+    .placeholder {
+      padding: 0.08em 0.35em;
+      border-radius: 4px;
+      background: var(--warning-bg);
+      color: var(--warning);
+      font-weight: 700;
+    }
+
+    .english {
+      margin-top: 64px;
+      padding-top: 44px;
+      border-top: 4px solid var(--accent);
+    }
+
+    .english .toc ol {
+      columns: 1;
+    }
+
+    footer {
+      margin-top: 38px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 18px, 960px);
+        margin-top: 10px;
+      }
+
+      .hero,
+      .content {
+        border-radius: 10px;
+      }
+
+      .toc ol {
+        columns: 1;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+      }
+
+      .hero,
+      .content {
+        border: 0;
+        box-shadow: none;
+      }
+
+      .notice {
+        border: 2px solid #000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Google Play · Privacy Policy</p>
+      <h1>《铁幕塔防》隐私政策</h1>
+      <p class="subtitle">Privacy Policy for Iron Curtain Defense / SGTF</p>
+      <div class="meta">
+        <span>生效日期：2026 年 7 月 24 日</span>
+        <span>最后更新：2026 年 7 月 24 日</span>
+        <span>适用版本：Google Play Android 版</span>
+      </div>
+    </header>
+
+    <article class="content">
+      <nav class="toc" aria-label="目录">
+        <h2>目录</h2>
+        <ol>
+          <li><a href="#scope">适用范围</a></li>
+          <li><a href="#data">我们处理的数据</a></li>
+          <li><a href="#use">数据用途</a></li>
+          <li><a href="#sharing">共享与第三方</a></li>
+          <li><a href="#retention">保存与删除</a></li>
+          <li><a href="#security">安全措施</a></li>
+          <li><a href="#children">未成年人隐私</a></li>
+          <li><a href="#rights">您的选择与权利</a></li>
+          <li><a href="#changes">政策更新</a></li>
+          <li><a href="#contact">联系我们</a></li>
+          <li><a href="#english">English Version</a></li>
+        </ol>
+      </nav>
+
+      <section id="scope">
+        <h2>1. 适用范围</h2>
+        <p>
+          本隐私政策适用于通过 Google Play 发布的《铁幕塔防》（项目代号 SGTF，以下简称“本游戏”）。
+          本政策说明本游戏如何访问、处理、保存和传输与您有关的信息。
+        </p>
+        <p>
+          当前 Google Play 版本无需注册账号，不提供聊天、好友、排行榜上传、应用内购买或用户生成内容功能，
+          也未集成第三方广告或行为分析 SDK。
+        </p>
+
+        <div class="summary" aria-label="隐私摘要">
+          <article>
+            <h3>账号</h3>
+            <p>无需账号，不收集姓名、邮箱或电话号码。</p>
+          </article>
+          <article>
+            <h3>本地存档</h3>
+            <p>进度和设置仅保存在您的设备上。</p>
+          </article>
+          <article>
+            <h3>网络</h3>
+            <p>仅用于下载游戏美术、模型等内容资源。</p>
+          </article>
+          <article>
+            <h3>广告与分析</h3>
+            <p>当前 Google Play 版本不含广告和分析 SDK。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="data">
+        <h2>2. 我们处理的数据</h2>
+
+        <h3>2.1 保存在设备上的游戏数据</h3>
+        <p>为了提供存档、设置和游戏连续性，本游戏会在设备的应用专属存储空间中保存：</p>
+        <ul>
+          <li>战役关卡、战斗结果、星级和挑战记录；</li>
+          <li>军功、永久强化、成就与游戏统计；</li>
+          <li>剧情选择及剧情进度；</li>
+          <li>音乐、音效、触感等偏好设置；</li>
+          <li>教程和操作引导的完成状态。</li>
+        </ul>
+        <p>
+          这些数据不包含您的真实姓名、电子邮箱、电话号码、通讯录、精确位置或支付信息。
+          当前版本不会将这些本地存档上传至开发者服务器。
+        </p>
+
+        <h3>2.2 内容资源下载产生的技术数据</h3>
+        <p>
+          本游戏的部分美术、模型和运行资源会通过 HTTPS 从腾讯云对象存储
+          （域名：<code>tafang-1385636285.cos.ap-guangzhou.myqcloud.com</code>）下载。
+          在建立网络连接和传输资源时，内容托管服务可能自动处理以下技术数据：
+        </p>
+        <ul>
+          <li>IP 地址；</li>
+          <li>设备、操作系统、应用版本和网络类型等基础技术信息；</li>
+          <li>请求时间、所请求的资源、响应状态及安全日志。</li>
+        </ul>
+        <p>
+          这些技术数据用于传输游戏内容、保障网络与服务安全、排查资源下载故障。
+          本游戏不会使用这些信息建立广告画像，也不会通过该资源服务识别您的真实身份。
+        </p>
+
+        <h3>2.3 我们不主动访问或收集的数据</h3>
+        <p>当前 Google Play 版本不主动访问或收集：</p>
+        <ul>
+          <li>姓名、邮箱、电话号码、邮寄地址或政府签发的身份信息；</li>
+          <li>精确或大致位置；</li>
+          <li>通讯录、短信、通话记录、日历或剪贴板内容；</li>
+          <li>照片、视频、音频、相机或麦克风数据；</li>
+          <li>健康、健身、金融或支付信息；</li>
+          <li>Android 广告 ID 或用于跨应用追踪的标识符。</li>
+        </ul>
+      </section>
+
+      <section id="use">
+        <h2>3. 数据用途</h2>
+        <p>本游戏仅在下列范围内处理数据：</p>
+        <ul>
+          <li>保存并恢复您的游戏进度和偏好；</li>
+          <li>计算关卡、成就、军功和挑战结果；</li>
+          <li>下载并显示游戏正常运行所需的内容资源；</li>
+          <li>维护资源服务的可靠性、安全性并排查技术故障；</li>
+          <li>履行适用法律法规和平台政策要求。</li>
+        </ul>
+        <p>我们不会出售您的个人数据，也不会将数据用于定向广告、信用评估或与本游戏无关的营销。</p>
+      </section>
+
+      <section id="sharing">
+        <h2>4. 数据共享与第三方服务</h2>
+        <p>当前 Google Play 版本仅在提供游戏所必需的范围内涉及以下第三方：</p>
+        <ul>
+          <li>
+            <strong>腾讯云对象存储：</strong>
+            用于托管和传输游戏资源。该服务可能按照其安全与日志机制处理第 2.2 节所述技术数据。
+          </li>
+          <li>
+            <strong>Google Play：</strong>
+            用于应用分发、更新和商店服务。Google 对其平台数据的处理适用 Google 自身的隐私政策。
+          </li>
+          <li>
+            <strong>Cocos Creator：</strong>
+            本游戏使用 Cocos Creator 引擎构建；当前项目未启用 Cocos Analytics 或 Cocos 在线账号服务。
+          </li>
+        </ul>
+        <p>
+          除非为遵守法律义务、保护用户或服务安全，或完成企业合并、收购等依法进行的业务变更，
+          我们不会向其他第三方披露与您有关的数据。发生此类变更时，我们会要求接收方继续遵守本政策或提供同等保护。
+        </p>
+      </section>
+
+      <section id="retention">
+        <h2>5. 数据保存与删除</h2>
+        <ul>
+          <li>
+            <strong>本地游戏数据：</strong>
+            保留在您的设备上，直到您在 Android 系统设置中清除本游戏的数据或卸载本游戏。
+          </li>
+          <li>
+            <strong>账号数据：</strong>
+            本游戏当前不提供账号，因此没有服务器端账号或账号删除流程。
+          </li>
+          <li>
+            <strong>资源服务日志：</strong>
+            可能由内容托管服务在提供资源、安全防护和故障排查所需期间保存，
+            并依据服务配置或适用法律删除或匿名化。
+          </li>
+        </ul>
+        <p>
+          如需删除本地数据，请打开 Android“设置”→“应用”→“铁幕塔防”→“存储”→“清除数据”，
+          或直接卸载本游戏。此操作通常不可撤销。
+        </p>
+      </section>
+
+      <section id="security">
+        <h2>6. 数据安全</h2>
+        <p>我们采取与数据性质相适应的措施，包括：</p>
+        <ul>
+          <li>将游戏存档保存在 Android 应用专属存储空间；</li>
+          <li>使用 HTTPS 传输远程内容资源；</li>
+          <li>限制数据处理范围，不要求不必要的敏感权限；</li>
+          <li>尽量减少服务器端数据处理，不建立用户账号或跨应用画像。</li>
+        </ul>
+        <p>
+          互联网传输或电子存储无法保证绝对安全。如发现可能影响您的安全事件，我们将根据适用法律采取处置和通知措施。
+        </p>
+      </section>
+
+      <section id="children">
+        <h2>7. 未成年人隐私</h2>
+        <p>
+          本游戏不会要求用户提供年龄、姓名、联系方式或其他个人资料，也不会主动收集儿童的个人信息。
+          如果未来版本面向儿童并新增广告、账号、分析或其他数据功能，我们会在发布前更新本政策并遵守
+          Google Play Families 政策及适用的未成年人保护要求。
+        </p>
+        <p>
+          如果监护人认为未成年人通过本游戏向我们提供了个人数据，请通过第 10 节的联系方式告知我们，
+          我们会核实并依法处理。
+        </p>
+      </section>
+
+      <section id="rights">
+        <h2>8. 您的选择与权利</h2>
+        <p>根据您所在地区适用的法律，您可能享有查询、访问、更正、删除、限制处理或投诉等权利。</p>
+        <ul>
+          <li>您可以随时通过 Android 系统设置清除本地游戏数据；</li>
+          <li>您可以通过卸载本游戏停止后续数据处理；</li>
+          <li>您可以通过第 10 节的联系方式提出隐私问题或权利请求。</li>
+        </ul>
+        <p>
+          由于本游戏不提供账号，且不会把本地存档上传至开发者服务器，我们通常无法从服务器检索或恢复您的本地游戏数据。
+        </p>
+      </section>
+
+      <section id="changes">
+        <h2>9. 本政策的更新</h2>
+        <p>
+          当游戏功能、第三方服务、数据处理方式或适用法律发生变化时，我们可能更新本政策。
+          更新后的版本会在本页面公布，并修改页面顶部的“最后更新”日期。
+          如果变更会显著影响您的权利，我们会在游戏内或通过其他适当方式作出醒目提示。
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>10. 开发者与隐私联系</h2>
+        <p>
+          开发者名称：
+          <strong>MENGQIANG ZHANG</strong>
+        </p>
+        <p>
+          隐私联系邮箱：
+          <a href="mailto:zqiang1678@gmail.com">zqiang1678@gmail.com</a>
+        </p>
+        <p>
+          联系时请注明“铁幕塔防隐私请求”，并说明您的问题或请求类型。
+          为保护您的隐私，请勿发送身份证件、银行卡号或其他不必要的敏感信息。
+        </p>
+      </section>
+
+      <section id="english" class="english" lang="en">
+        <p class="eyebrow">English Version</p>
+        <h2>Privacy Policy for Iron Curtain Defense</h2>
+        <p>
+          <strong>Effective date:</strong> July 24, 2026<br>
+          <strong>Last updated:</strong> July 24, 2026<br>
+          <strong>Applies to:</strong> Google Play Android version
+        </p>
+
+        <h3>1. Scope</h3>
+        <p>
+          This Privacy Policy applies to the Google Play version of Iron Curtain Defense
+          (project code SGTF, the “Game”). The current version does not require an account
+          and does not provide chat, uploaded leaderboards, in-app purchases, or user-generated content.
+          It does not include a third-party advertising or behavioral analytics SDK.
+        </p>
+
+        <h3>2. Data processed by the Game</h3>
+        <p>
+          The Game stores campaign progress, battle results, stars, merit, upgrades, achievements,
+          story choices, settings, and tutorial status locally in the app-specific storage area on your device.
+          This local save data is not uploaded to the developer’s server in the current version.
+        </p>
+        <p>
+          Some art, model, and runtime assets are downloaded over HTTPS from Tencent Cloud Object Storage
+          at <code>tafang-1385636285.cos.ap-guangzhou.myqcloud.com</code>. When these files are requested,
+          the hosting service may automatically process an IP address, basic device/app/network information,
+          request times, requested resources, response status, and security logs. This technical information
+          is used only to deliver content, secure the service, and troubleshoot downloads.
+        </p>
+        <p>
+          The current Google Play version does not actively access or collect your name, email address,
+          phone number, contacts, precise or approximate location, photos, camera, microphone,
+          health information, financial information, Android Advertising ID, or identifiers used
+          for cross-app tracking.
+        </p>
+
+        <h3>3. How data is used</h3>
+        <ul>
+          <li>To save and restore game progress and preferences;</li>
+          <li>To calculate levels, achievements, rewards, and challenge results;</li>
+          <li>To download content required for the Game to operate;</li>
+          <li>To maintain service reliability and security and diagnose technical failures;</li>
+          <li>To comply with applicable law and platform requirements.</li>
+        </ul>
+        <p>We do not sell personal data or use it for targeted advertising, credit scoring, or unrelated marketing.</p>
+
+        <h3>4. Third parties and sharing</h3>
+        <ul>
+          <li>
+            <strong>Tencent Cloud Object Storage</strong> hosts and delivers Game assets and may process
+            the technical network data described above.
+          </li>
+          <li>
+            <strong>Google Play</strong> distributes and updates the Game. Google processes platform data
+            under its own privacy policy.
+          </li>
+          <li>
+            <strong>Cocos Creator</strong> is the engine used to build the Game. Cocos Analytics and
+            Cocos online account services are not enabled in the current project.
+          </li>
+        </ul>
+        <p>
+          We do not otherwise disclose user data except where required by law, necessary to protect users
+          or service security, or as part of a lawful business transfer subject to equivalent protections.
+        </p>
+
+        <h3>5. Retention and deletion</h3>
+        <p>
+          Local save data remains on your device until you clear the Game’s app data in Android settings
+          or uninstall the Game. The Game currently has no server-side account data.
+          Content-hosting logs may be retained by the hosting provider for content delivery, security,
+          troubleshooting, and legal compliance, and then deleted or anonymized according to service settings.
+        </p>
+
+        <h3>6. Security</h3>
+        <p>
+          We keep save data in app-specific storage, use HTTPS for remote content, avoid unnecessary
+          sensitive permissions, and minimize server-side processing. No method of electronic storage
+          or transmission is completely secure.
+        </p>
+
+        <h3>7. Children</h3>
+        <p>
+          The Game does not ask users to provide an age, name, contact details, or other personal profile
+          information, and we do not knowingly collect children’s personal information.
+          If a parent or guardian believes a child provided personal data through the Game,
+          please contact us so we can investigate and respond as required by law.
+        </p>
+
+        <h3>8. Your choices and rights</h3>
+        <p>
+          Depending on applicable law, you may have rights to access, correct, delete, restrict,
+          or object to processing. You can delete local save data through Android settings or by uninstalling
+          the Game. Because local saves are not uploaded, we generally cannot retrieve or restore them from a server.
+        </p>
+
+        <h3>9. Changes</h3>
+        <p>
+          We may update this policy when Game features, third-party services, processing practices,
+          or legal requirements change. We will publish the revised policy here and update the date above.
+          Material changes will be highlighted in the Game or by another appropriate notice.
+        </p>
+
+        <h3>10. Developer and privacy contact</h3>
+        <p>
+          <strong>Developer:</strong>
+          MENGQIANG ZHANG<br>
+          <strong>Privacy email:</strong>
+          <a href="mailto:zqiang1678@gmail.com">zqiang1678@gmail.com</a>
+        </p>
+        <p>
+          Please include “Iron Curtain Defense privacy request” in your message and do not send
+          unnecessary sensitive information.
+        </p>
+      </section>
+    </article>
+
+    <footer>
+      <p>《铁幕塔防》 / Iron Curtain Defense · Privacy Policy</p>
+    </footer>
+  </main>
+</body>
+</html>
