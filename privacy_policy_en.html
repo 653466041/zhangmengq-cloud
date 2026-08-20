@@ -55,7 +55,7 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective date: June 3, 2026</p>
+  <p class="meta">Effective date: August 9, 2026</p>
 
   <p>This Privacy Policy applies to the Android app "Android Screen Translator" (package name: com.zhang.androidscreentranslator). The app recognizes text from screen captures on your device and translates it into the target language you choose.</p>
 
@@ -64,8 +64,9 @@
   <ul>
     <li>Screen capture content: used only after you grant screen capture permission and start translation, for recognizing and translating text on the screen.</li>
     <li>App settings: source language, target language, auto-detect preference, optimization mode, permission guide status, and similar preferences.</li>
-    <li>Advertising information: the app integrates the Vungle SDK. Vungle/Liftoff may process device identifiers, advertising identifiers, IP address, ad impressions, ad interactions, and related information according to Liftoff policies for ad delivery, frequency capping, fraud prevention, and analytics.</li>
+    <li>Advertising information: the app integrates the Unity LevelPlay mediation SDK. Unity LevelPlay and its configured advertising partners may process device identifiers, advertising identifiers, IP address, ad impressions, ad interactions, and related information according to their respective policies for ad delivery, frequency capping, fraud prevention, and analytics.</li>
     <li>Language model download information: offline OCR, language identification, and translation use Google ML Kit. Some models may be downloaded from Google services, which may create network requests and standard connection logs.</li>
+    <li>Online translation content: only when you confirm and select Online Mode, recognized text is sent to the DeepSeek API to generate translations. Screen capture images are not sent to DeepSeek.</li>
   </ul>
 
   <h2>2. How We Use Information</h2>
@@ -73,28 +74,30 @@
   <ul>
     <li>Recognize screen text locally and generate translation results.</li>
     <li>Remember language, mode, and permission-related settings.</li>
-    <li>Show app open ads or rewarded ads.</li>
+    <li>Show interstitial or rewarded ads.</li>
     <li>Download or update local recognition, language identification, and translation models.</li>
     <li>Maintain app stability, feature availability, and basic security.</li>
   </ul>
 
   <h2>3. Screen Content and Translation Content</h2>
-  <p>Screen captures, OCR recognition results, and translation results are processed on your device by default. The app does not actively upload screen captures, recognized text, or translated text to servers operated by us.</p>
+  <p>Screen captures are processed on your device and are not uploaded by the translation feature. Offline and Offline Enhanced modes keep OCR text and translation processing on the device. When you explicitly select Online Mode, recognized text is sent to DeepSeek for translation; the screenshot itself is not sent. Do not use Online Mode for sensitive screen content.</p>
   <p>Please note that your device, system services, Google Play services, input methods, accessibility services, advertising SDKs, or other third-party software may have their own data processing practices. Those practices are governed by the privacy policies of the relevant providers.</p>
 
   <h2>4. Third-Party Services</h2>
   <p>The app uses these third-party services:</p>
   <ul>
     <li>Google ML Kit: provides local OCR, language identification, and local translation model capabilities. Some models may be downloaded over the network.</li>
-    <li>Vungle SDK: displays ads, including startup interstitial ads and rewarded ads.</li>
+    <li>Unity LevelPlay mediation SDK: displays interstitial and rewarded ads.</li>
+    <li>DeepSeek API: provides translation only when Online Mode is selected and receives recognized text required for that request.</li>
   </ul>
   <p>These third-party services may collect and process data according to their own policies. See the Google Privacy Policy for more information: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-  <p>See the Liftoff Privacy Policy for Vungle advertising information: <a href="https://liftoff.io/privacy-policy/">https://liftoff.io/privacy-policy/</a></p>
+  <p>See the Unity Privacy Policy for advertising information: <a href="https://unity.com/legal/privacy-policy">https://unity.com/legal/privacy-policy</a></p>
+  <p>See the DeepSeek Privacy Policy for online translation information: <a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html">DeepSeek Privacy Policy</a></p>
 
   <h2>5. Android Permissions</h2>
   <p>The app may request these permissions:</p>
   <ul>
-    <li>INTERNET: used for loading ads, downloading language models, and related network features.</li>
+    <li>INTERNET: used for loading ads, downloading language models, and online translation after you select Online Mode.</li>
     <li>SYSTEM_ALERT_WINDOW: used to show the floating translation button or translation results above other apps.</li>
     <li>FOREGROUND_SERVICE and FOREGROUND_SERVICE_MEDIA_PROJECTION: used to keep a foreground service active during screen capture translation.</li>
     <li>POST_NOTIFICATIONS: used on Android 13 and above to show foreground service notifications.</li>
@@ -107,8 +110,8 @@
   <p>Data generated by advertising SDKs or Google services is retained according to the policies of the corresponding third-party services.</p>
 
   <h2>7. Data Sharing</h2>
-  <p>The app does not sell your personal information. The app does not share screen captures, recognized text, or translated text with servers operated by us.</p>
-  <p>To provide ads and model downloads, Vungle/Liftoff, Google Play services, or Google ML Kit may receive necessary device, network, advertising, or model download related information.</p>
+  <p>The app does not sell your personal information. Screen captures are not shared with DeepSeek or servers operated by us. Online Mode sends recognized text to DeepSeek solely to provide the requested translation.</p>
+  <p>To provide ads and model downloads, Unity LevelPlay and its configured advertising partners, Google Play services, or Google ML Kit may receive necessary device, network, advertising, or model download related information.</p>
 
   <h2>8. Child Privacy</h2>
   <p>The app is not directed to children under 13. If you believe a child has provided personal information to the app or related third-party services without guardian consent, please contact us through the developer contact information shown on the app store page.</p>
@@ -122,6 +125,7 @@
     <li>Clear this app data in system settings.</li>
     <li>Uninstall the app to delete locally stored data.</li>
     <li>Manage advertising personalization options in Android or Google settings.</li>
+    <li>Use an offline mode instead of Online Mode so recognized text remains on the device.</li>
   </ul>
 
   <h2>10. Policy Updates</h2>
