@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      name="description"
+      content="Aqua Haven 隐私政策：了解本地游戏存档、权限、数据保留与删除方式。开发者 MENGQIANG ZHANG。"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"
+    />
+    <title>隐私政策 · Aqua Haven</title>
+    <style>
+      :root {
+        --ink: #183b35;
+        --muted: #586b65;
+        --accent: #216653;
+        --paper: #f6f7f3;
+        --line: #dbe4dc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 28px;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font:
+          16px/1.9 system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Microsoft YaHei",
+          sans-serif;
+      }
+      a {
+        color: var(--accent);
+        text-underline-offset: 4px;
+        overflow-wrap: anywhere;
+      }
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid #ba8844;
+        outline-offset: 5px;
+      }
+      .skip {
+        position: absolute;
+        left: 16px;
+        top: -100px;
+        padding: 8px 16px;
+        background: white;
+        z-index: 2;
+      }
+      .skip:focus {
+        top: 12px;
+      }
+      .wrap {
+        width: min(1100px, calc(100% - 64px));
+        margin-inline: auto;
+      }
+      header {
+        padding: 50px 0 32px;
+        border-bottom: 1px solid var(--line);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 13px;
+        font-weight: 650;
+        letter-spacing: 0.15em;
+      }
+      .mark {
+        width: 13px;
+        height: 13px;
+        background: var(--accent);
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(-45deg);
+      }
+      .eyebrow {
+        margin: 42px 0 8px;
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 650;
+        letter-spacing: 0.17em;
+      }
+      h1 {
+        margin: 0 0 16px;
+        font-size: clamp(34px, 5vw, 48px);
+        line-height: 1.3;
+        font-weight: 650;
+        letter-spacing: -0.03em;
+      }
+      .lead {
+        max-width: 710px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 28px;
+        margin-top: 24px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+      }
+      .summary div {
+        border-left: 2px solid #a6bcab;
+        padding-left: 16px;
+      }
+      .summary span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .summary strong {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 54px;
+        align-items: start;
+        padding-top: 38px;
+        padding-bottom: 60px;
+      }
+      nav {
+        position: sticky;
+        top: 24px;
+        padding-top: 10px;
+      }
+      nav p {
+        margin: 0 0 12px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      nav ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav li {
+        margin-bottom: 9px;
+      }
+      nav a {
+        font-size: 14px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      article {
+        min-width: 0;
+        background: #fff;
+        padding: 38px 42px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+      }
+      section + section {
+        margin-top: 34px;
+        padding-top: 28px;
+        border-top: 1px solid var(--line);
+      }
+      h2 {
+        margin: 0 0 14px;
+        font-size: 21px;
+        line-height: 1.55;
+        font-weight: 650;
+      }
+      p {
+        margin: 0 0 16px;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+      ul,
+      ol {
+        padding-left: 23px;
+        margin: 12px 0 18px;
+      }
+      li {
+        padding-left: 3px;
+        margin-bottom: 7px;
+      }
+      .note {
+        padding: 16px 18px;
+        background: #edf4ee;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+      .note strong {
+        color: var(--accent);
+      }
+      .table-wrap {
+        margin: 20px 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+        font-size: 14px;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 14px 12px;
+        border-bottom: 1px solid var(--line);
+        overflow-wrap: anywhere;
+      }
+      th {
+        color: var(--accent);
+        background: #f1f5ef;
+        font-weight: 600;
+      }
+      th:first-child,
+      td:first-child {
+        width: 28%;
+      }
+      code {
+        font:
+          0.88em/1.6 ui-monospace,
+          "Cascadia Code",
+          Consolas,
+          monospace;
+        overflow-wrap: anywhere;
+      }
+      .contact {
+        display: grid;
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 10px 16px;
+        margin: 18px 0 0;
+      }
+      .contact dt {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .contact dd {
+        margin: 0;
+        overflow-wrap: anywhere;
+      }
+      footer {
+        padding: 24px 0 38px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 12px;
+      }
+      footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px 30px;
+      }
+      @media (max-width: 850px) {
+        .wrap {
+          width: min(720px, calc(100% - 40px));
+        }
+        .layout {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 24px;
+          padding-top: 24px;
+        }
+        nav {
+          position: static;
+          padding: 0;
+        }
+        nav ol {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          column-gap: 18px;
+        }
+        nav li {
+          margin-bottom: 7px;
+        }
+        article {
+          padding: 30px 26px;
+        }
+      }
+      @media (max-width: 440px) {
+        .wrap {
+          width: calc(100% - 32px);
+        }
+        header {
+          padding-top: 30px;
+        }
+        .eyebrow {
+          margin-top: 30px;
+        }
+        .lead {
+          font-size: 16px;
+        }
+        .summary {
+          gap: 10px;
+        }
+        .summary div {
+          padding-left: 10px;
+        }
+        .summary strong {
+          font-size: 14px;
+        }
+        article {
+          padding: 26px 19px;
+          border-radius: 12px;
+        }
+        h2 {
+          font-size: 19px;
+        }
+        th,
+        td {
+          padding: 12px 8px;
+          font-size: 13px;
+        }
+        .contact {
+          grid-template-columns: 1fr;
+          gap: 2px;
+        }
+        .contact dd {
+          margin-bottom: 12px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      @media print {
+        body {
+          background: white;
+          font-size: 11pt;
+        }
+        .wrap {
+          width: 100%;
+        }
+        nav,
+        .skip,
+        .summary {
+          display: none;
+        }
+        header {
+          padding-top: 0;
+        }
+        .eyebrow {
+          margin-top: 20px;
+        }
+        .layout {
+          display: block;
+          padding-top: 20px;
+        }
+        article {
+          border: 0;
+          padding: 0;
+        }
+        h2 {
+          break-after: avoid;
+        }
+        tr {
+          break-inside: avoid;
+        }
+        a {
+          color: inherit;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#content">跳转到政策正文</a>
+    <header>
+      <div class="wrap">
+        <div class="brand">
+          <span class="mark" aria-hidden="true"></span>AQUA HAVEN
+        </div>
+        <p class="eyebrow">PRIVACY POLICY</p>
+        <h1>隐私政策</h1>
+        <p class="lead">
+          本政策说明 Aqua Haven
+          如何处理您在使用应用时产生的信息，以及您管理和删除这些信息的方式。
+        </p>
+        <div class="meta">
+          <span
+            >生效日期：<time datetime="2026-11-13"
+              >2026 年 11 月 13 日</time
+            ></span
+          >
+          <span
+            >最近更新：<time datetime="2026-11-13"
+              >2026 年 11 月 13 日</time
+            ></span
+          >
+          <span>适用版本：0.2.0 离线版</span>
+        </div>
+        <div class="summary" aria-label="当前版本隐私概览">
+          <div><span>游戏进度</span><strong>保存在本机</strong></div>
+          <div><span>使用方式</span><strong>无需登录</strong></div>
+          <div><span>数据管理</span><strong>可自行清除</strong></div>
+        </div>
+      </div>
+    </header>
+    <main class="wrap layout" id="content">
+      <nav aria-label="隐私政策目录">
+        <p>本页目录</p>
+        <ol>
+          <li><a href="#scope">01 适用范围</a></li>
+          <li><a href="#information">02 处理哪些信息</a></li>
+          <li><a href="#purpose">03 信息的用途</a></li>
+          <li><a href="#permissions">04 权限与第三方组件</a></li>
+          <li><a href="#retention">05 存储与保留</a></li>
+          <li><a href="#sharing">06 信息共享与传输</a></li>
+          <li><a href="#rights">07 管理和删除信息</a></li>
+          <li><a href="#children">08 未成年人保护</a></li>
+          <li><a href="#changes">09 政策更新</a></li>
+          <li><a href="#contact">10 联系我们</a></li>
+        </ol>
+      </nav>
+      <article aria-label="隐私政策正文">
+        <section id="scope">
+          <h2>01 · 适用范围</h2>
+          <p>
+            Aqua Haven 由
+            <strong>MENGQIANG ZHANG</strong> 开发和提供。本政策适用于 Aqua Haven
+            Android
+            应用（应用包名：<code>com.aquahaven.game</code>）当前离线版本及与该版本相关的隐私咨询。
+          </p>
+          <p class="note">
+            <strong>当前版本可离线使用。</strong
+            >游戏进度保存在您的设备上；Google
+            登录、云存档、广告及真实付费购买尚未启用。界面中的相关入口不表示这些服务已开始收集或上传信息。
+          </p>
+        </section>
+        <section id="information">
+          <h2>02 · 我们处理哪些信息</h2>
+          <p>为提供水族馆和专注计时功能，应用会在本机处理下列信息：</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">信息类别</th>
+                  <th scope="col">具体内容</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>水族馆与游戏进度</td>
+                  <td>
+                    已拥有的鱼类、您为鱼设置的昵称、成长与互动进度、水族馆名称、背景、装饰摆放、珍珠、经验、任务、奖励与引导进度。
+                  </td>
+                </tr>
+                <tr>
+                  <td>专注记录</td>
+                  <td>
+                    您选择的专注时长、开始时间、计时进度、暂停状态、完成记录，以及用于恢复和校验计时的时间记录。
+                  </td>
+                </tr>
+                <tr>
+                  <td>偏好设置</td>
+                  <td>
+                    语言、音效、音景、画质、减少动态效果、显示数量和后台计时选项。
+                  </td>
+                </tr>
+                <tr>
+                  <td>存档与恢复信息</td>
+                  <td>
+                    本地生成的存档标识、创建和保存时间、上一份存档备份，以及发生存档损坏时保留的恢复副本。这些标识不用于跨应用追踪。
+                  </td>
+                </tr>
+                <tr>
+                  <td>本地诊断信息</td>
+                  <td>
+                    测试版本可能在 Android
+                    本地日志中记录构建版本、帧率、鱼类数量、画质、界面与音频状态及运行错误，用于排查问题，不自动上传。
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            我们不通过当前应用收集您的真实姓名、身份证件、手机号、通讯录、精确位置、照片、麦克风录音、广告标识符或支付卡信息。您为鱼设置的昵称仅作为游戏内容处理，无需填写真实身份信息。
+          </p>
+          <p>
+            如果您主动发送电子邮件联系我们，我们会收到您的邮箱地址、邮件内容及您主动提供的附件，用于回复和处理该次请求。
+          </p>
+        </section>
+        <section id="purpose">
+          <h2>03 · 信息如何使用</h2>
+          <ul>
+            <li>保存和恢复您的鱼类、布景、游戏进度及偏好设置。</li>
+            <li>提供互动、任务、奖励和离线成长功能。</li>
+            <li>进行专注计时，恢复中断的会话并避免重复发放奖励。</li>
+            <li>通过本地诊断信息排查运行问题。</li>
+            <li>回复您主动提出的咨询、故障反馈或隐私请求。</li>
+          </ul>
+          <p>当前版本不使用这些信息进行广告画像、个性化广告或跨应用追踪。</p>
+        </section>
+        <section id="permissions">
+          <h2>04 · 权限与第三方组件</h2>
+          <p>
+            Android
+            安装包声明了网络访问和网络状态权限，但当前离线功能不通过这些权限向我们的服务器上传游戏存档或账号信息。安装包还包含
+            Google Play
+            结算权限声明，当前版本尚未启用真实购买，不会因此读取您的支付卡资料或自动产生扣款。
+          </p>
+          <p>
+            当前版本不申请相机、麦克风、定位、通讯录或照片读取等敏感运行时权限。
+          </p>
+          <p>
+            应用使用 Cocos
+            引擎完成本地画面、音频和交互。当前版本未启用广告、远程行为统计或自动崩溃上报服务，也未配置在线登录及云存档服务。
+          </p>
+          <p>
+            如果您主动通过邮件联系我们，邮件会经过您选择的邮件服务商及我们使用的
+            Gmail 邮箱服务处理；邮件服务本身适用相应服务商的隐私规则。
+          </p>
+        </section>
+        <section id="retention">
+          <h2>05 · 信息存储、安全与保留</h2>
+          <p>
+            游戏存档和恢复副本保存在 Android
+            为本应用分配的本地存储区域。应用不向我们运营的服务器备份这些内容，当前
+            Android 安装包也关闭了应用自动备份配置。
+          </p>
+          <p>
+            本地存档通常保留至您清除本应用的数据或卸载应用；存档备份和损坏恢复副本随应用数据一起移除。本地调试日志由
+            Android 系统按照其日志机制保留和轮换。
+          </p>
+          <p>
+            您主动发送的咨询邮件，仅在回复、解决问题和处理相关请求所必要的期间保留；不再需要后删除或匿名化，适用法律另有保留要求的除外。
+          </p>
+          <p>
+            我们通过应用隔离存储、存档校验和恢复副本降低误访问或数据损坏的风险。请妥善管理设备访问权限，设备丢失、系统故障或清除数据仍可能导致进度丢失。
+          </p>
+        </section>
+        <section id="sharing">
+          <h2>06 · 信息共享与传输</h2>
+          <p>
+            当前离线应用不向我们或第三方上传本地游戏存档、鱼类昵称、专注记录、鱼的逐帧轨迹或鱼缸截图。我们不出售或出租这些信息，也不将其提供给广告商。
+          </p>
+          <p>
+            如果您主动发送邮件或诊断附件，我们仅为处理该次请求使用您提供的内容。邮件传输及存储可能涉及您和我们所使用的邮件服务商所在的不同地区。我们不会通过当前离线应用另行进行跨境存档同步。
+          </p>
+          <p>
+            在适用法律要求且具有合法依据时，我们可能需要处理或披露已实际持有的咨询资料，并在法律允许的范围内限制披露内容。
+          </p>
+        </section>
+        <section id="rights">
+          <h2>07 · 您如何管理和删除信息</h2>
+          <ul>
+            <li>
+              <strong>查看和修改：</strong
+              >您可在应用中查看水族馆和当前专注会话，修改鱼的昵称、布景及可用设置。
+            </li>
+            <li>
+              <strong>删除本地数据：</strong>在手机系统设置中进入“应用管理 →
+              Aqua Haven →
+              存储”，选择“清除数据”或“清除存储空间”。不同手机的菜单名称可能不同。
+            </li>
+            <li>
+              <strong>卸载应用：</strong
+              >卸载通常会删除本应用的本地存档与恢复副本。当前版本没有云恢复服务，清除或卸载后的进度可能无法找回。
+            </li>
+            <li>
+              <strong>咨询资料：</strong
+              >您可通过下方邮箱请求访问、更正或删除您主动提供给我们的个人信息；我们将核验与请求有关的必要信息，并依适用法律处理。
+            </li>
+          </ul>
+          <p>
+            当前版本无需注册账号，尚无在线账户或云端存档，因此不存在需要单独注销的已启用云账户。仅关闭应用不会清除本地存档。
+          </p>
+        </section>
+        <section id="children">
+          <h2>08 · 未成年人保护</h2>
+          <p>
+            当前版本不要求提供年龄、真实身份或在线账号信息。未成年人应在监护人指导下使用应用和管理设备数据。
+          </p>
+          <p>
+            我们不会明知而通过咨询渠道收集与处理请求无关的儿童个人信息。若监护人认为有儿童个人信息被主动发送给我们，可联系下方邮箱请求核查和删除。
+          </p>
+        </section>
+        <section id="changes">
+          <h2>09 · 隐私政策更新</h2>
+          <p>
+            如应用的数据处理方式发生变化，我们会更新本政策和最近更新日期。未来若启用登录、云同步、广告或付费等在线功能，我们会在启用前补充相应的数据类别、用途、接收方及管理方式，并在适用法律要求时另行告知或征求您的同意。
+          </p>
+          <p>
+            本政策描述的是当前离线版本的实际功能，不表示您已同意任何尚未启用的在线服务。
+          </p>
+        </section>
+        <section id="contact">
+          <h2>10 · 联系我们</h2>
+          <p>
+            如您对本政策、个人信息处理方式或隐私请求有疑问，请通过以下方式联系：
+          </p>
+          <dl class="contact">
+            <dt>开发者</dt>
+            <dd>MENGQIANG ZHANG</dd>
+            <dt>应用名称</dt>
+            <dd>Aqua Haven</dd>
+            <dt>联系邮箱</dt>
+            <dd>
+              <a href="mailto:zqiang1678@gmail.com">zqiang1678@gmail.com</a>
+            </dd>
+          </dl>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <div class="wrap">
+        <span>Aqua Haven · MENGQIANG ZHANG</span
+        ><span>静态页面，可离线阅读</span>
+      </div>
+    </footer>
+    <!-- Disclosure reference checked 2026-11-13: https://support.google.com/googleplay/android-developer/answer/10144311?hl=en -->
+  </body>
+</html>
