@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="云上寺庙 Cloud Temple 隐私政策，了解本机存档、私人心愿、权限使用与数据删除方式。开发者：MENGQIANG ZHANG。">
+  <meta name="theme-color" content="#304b3c">
+  <meta name="referrer" content="no-referrer">
+  <title>隐私政策 · 云上寺庙 Cloud Temple</title>
+  <style>
+    :root { --paper: #f5f1e8; --surface: #fffcf5; --ink: #253c30; --body: #4b534c; --muted: #646d61; --line: #dfdfcf; --gold: #806335; --green: #304b3c; --soft: #eaf0e6; --radius: 22px; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 104px; }
+    body { margin: 0; background: var(--paper); color: var(--body); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 16px; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+    a { color: var(--green); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+    a:hover { color: #6c522d; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; border-radius: 4px; }
+    button { font: inherit; }
+    .skip { position: fixed; top: -100px; left: 16px; z-index: 30; padding: 10px 18px; background: var(--surface); }
+    .skip:focus { top: 12px; }
+    .site-header { position: sticky; top: 0; z-index: 10; background: #f5f1e8f5; border-bottom: 1px solid var(--line); }
+    .header-inner { max-width: 1192px; min-height: 86px; margin: auto; padding: 16px 36px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 13px; color: var(--ink); text-decoration: none; }
+    .brand svg { width: 42px; height: 42px; flex: none; }
+    .brand-title { display: block; font: 600 21px/1.4 "Songti SC", "Noto Serif CJK SC", SimSun, serif; letter-spacing: 3px; }
+    .brand-en { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; line-height: 1.4; letter-spacing: 2.4px; }
+    .header-note { color: var(--muted); font-size: 13px; letter-spacing: 1px; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+    .hero { padding: 72px 0 46px; border-bottom: 1px solid var(--line); }
+    .eyebrow { margin: 0 0 13px; font-size: 11px; letter-spacing: 3px; color: var(--gold); font-weight: 600; }
+    h1, h2, h3 { color: var(--ink); }
+    h1 { margin: 0; font: 500 clamp(38px, 5.7vw, 64px)/1.3 "Songti SC", "Noto Serif CJK SC", SimSun, serif; letter-spacing: 4px; }
+    .intro { margin: 20px 0 24px; font-size: 17px; color: var(--muted); }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 12px; color: var(--muted); }
+    .meta time { color: var(--body); }
+    .package { overflow-wrap: anywhere; letter-spacing: .3px; }
+    .layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 56px; align-items: start; padding-top: 42px; padding-bottom: 70px; }
+    .contents { position: sticky; top: 120px; padding: 0 0 24px; }
+    .contents-title { margin: 0 0 18px; font-size: 11px; font-weight: 600; color: var(--gold); letter-spacing: 3px; }
+    .contents ol { list-style: none; margin: 0; padding: 0; }
+    .contents li { margin: 0 0 4px; }
+    .contents a { display: flex; gap: 13px; padding: 5px 0; text-decoration: none; color: #5c685c; font-size: 13px; }
+    .contents a:hover { color: var(--ink); text-decoration: underline; }
+    .contents a span { color: var(--gold); font-size: 10px; padding-top: 3px; min-width: 17px; }
+    .contact-small { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .contact-small a { display: inline-block; margin-top: 8px; overflow-wrap: anywhere; }
+    main { min-width: 0; }
+    .summary { padding: 27px 30px; margin-bottom: 40px; background: var(--green); color: #eff3e9; border-radius: var(--radius); }
+    .summary h2 { margin: 0 0 12px; color: #fff7e5; font: 500 23px/1.5 "Songti SC", SimSun, serif; letter-spacing: 1px; }
+    .summary p { margin: 0; color: #e1e9dc; font-size: 14px; line-height: 1.95; }
+    .summary-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 19px; }
+    .summary-tags span { border: 1px solid #ffffff40; color: #f4ead3; padding: 3px 12px; font-size: 11px; border-radius: 20px; }
+    section.policy-section { margin-bottom: 33px; padding-bottom: 31px; border-bottom: 1px solid var(--line); }
+    .section-heading { display: flex; gap: 13px; align-items: baseline; margin-bottom: 16px; }
+    .section-num { font-size: 11px; color: var(--gold); letter-spacing: 1px; min-width: 20px; }
+    h2 { font: 600 24px/1.5 "Songti SC", "Noto Serif CJK SC", SimSun, serif; margin: 0; letter-spacing: .7px; }
+    h3 { margin: 21px 0 8px; font-size: 15px; font-weight: 600; }
+    p { margin: 12px 0; }
+    ul { margin: 12px 0; padding-left: 22px; }
+    li { padding-left: 3px; margin: 7px 0; }
+    strong { color: var(--ink); font-weight: 600; }
+    .owner { background: var(--surface); border: 1px solid var(--line); border-radius: 15px; padding: 17px 21px; margin-top: 19px; }
+    .owner dl { margin: 0; display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 6px 13px; font-size: 13px; }
+    dt { color: var(--muted); }
+    dd { margin: 0; color: var(--ink); overflow-wrap: anywhere; }
+    .data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin-top: 18px; }
+    .data-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 17px 20px; }
+    .data-card h3 { margin: 0 0 6px; font-size: 14px; }
+    .data-card p { margin: 0; font-size: 13px; line-height: 1.9; color: #667063; }
+    .data-card .label { display: block; margin-bottom: 10px; color: var(--gold); font-size: 10px; letter-spacing: 1.5px; }
+    .note { background: var(--soft); border-left: 3px solid #84997d; border-radius: 0 12px 12px 0; padding: 13px 18px; margin: 20px 0; font-size: 13px; }
+    .note p { margin: 0; }
+    .permission-list { margin: 18px 0; border-top: 1px solid var(--line); }
+    .permission { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 15px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+    .permission strong { font-size: 13px; font-weight: 600; }
+    .permission p { margin: 0; }
+    .contact-card { background: var(--surface); padding: 25px 28px; border: 1px solid var(--line); border-radius: var(--radius); }
+    .contact-card h2 { margin-bottom: 11px; }
+    .contact-card p { font-size: 14px; }
+    .email-link { display: inline-flex; align-items: center; gap: 9px; max-width: 100%; padding: 10px 16px; margin-top: 6px; border-radius: 30px; background: var(--green); color: #fff7e5; font-size: 13px; text-decoration: none; overflow-wrap: anywhere; }
+    .email-link:hover { background: #243f30; color: white; }
+    .email-link svg { width: 16px; height: 16px; flex: none; }
+    .contact-tip { color: var(--muted); font-size: 12px !important; }
+    .page-end { display: flex; gap: 12px; justify-content: space-between; margin-top: 24px; font-size: 12px; color: var(--muted); }
+    .print-button { display: none; padding: 0; border: 0; background: transparent; color: var(--green); cursor: pointer; text-decoration: underline; text-underline-offset: 4px; font-size: 12px; }
+    .js .print-button { display: inline-block; }
+    footer { border-top: 1px solid var(--line); padding: 26px 0; color: var(--muted); font-size: 11px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 850px) {
+      .header-inner { padding: 14px 24px; min-height: 77px; }
+      .layout { grid-template-columns: 1fr; gap: 28px; }
+      .contents { position: static; padding: 0 0 25px; border-bottom: 1px solid var(--line); }
+      .contents-title { margin-bottom: 12px; }
+      .contents ol { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+      .contact-small { display: none; }
+      .hero { padding-top: 45px; }
+    }
+    @media (max-width: 480px) {
+      body { font-size: 14px; }
+      .wrap { padding: 0 22px; }
+      .header-inner { padding: 13px 21px; }
+      .brand-title { font-size: 18px; }
+      .brand-en { font-size: 8px; }
+      .brand svg { width: 35px; height: 35px; }
+      .header-note { font-size: 11px; letter-spacing: 0; }
+      .hero { padding-top: 38px; padding-bottom: 29px; }
+      .intro { font-size: 14px; line-height: 1.8; margin: 17px 0 21px; }
+      .meta { font-size: 11px; gap: 6px 17px; }
+      .layout { padding-top: 27px; padding-bottom: 45px; }
+      .summary { padding: 23px; margin-bottom: 31px; }
+      .summary h2 { font-size: 21px; }
+      .summary p { font-size: 13px; }
+      h2 { font-size: 21px; }
+      .data-grid { grid-template-columns: 1fr; }
+      .owner { padding: 15px 17px; }
+      .owner dl { grid-template-columns: 72px minmax(0, 1fr); gap: 6px 10px; font-size: 12px; }
+      .permission { grid-template-columns: 88px minmax(0, 1fr); gap: 12px; }
+      .contact-card { padding: 22px; }
+      .email-link { font-size: 12px; padding: 10px 13px; }
+      .page-end { align-items: center; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { background: white; color: #222; font-size: 10pt; line-height: 1.65; }
+      .site-header { position: static; background: white; }
+      .header-inner, .wrap { max-width: none; padding-left: 0; padding-right: 0; }
+      .header-note, .contents, .page-end, .skip { display: none; }
+      .hero { padding-top: 20px; padding-bottom: 20px; }
+      h1 { font-size: 28pt; }
+      .intro { font-size: 11pt; margin: 10px 0; }
+      .layout { display: block; padding: 22px 0; }
+      .summary { color: #222; background: #f1f1ec; border: 1px solid #ccc; padding: 18px; margin-bottom: 22px; }
+      .summary h2, .summary p, .summary-tags span { color: #222; }
+      .summary-tags span { border-color: #aaa; }
+      section.policy-section { margin-bottom: 18px; padding-bottom: 16px; }
+      h2, h3, .section-heading { break-after: avoid; }
+      .data-card, .owner, .note, .contact-card, .permission { break-inside: avoid; }
+      a { color: #222; }
+      .email-link { background: white; color: #222; padding: 0; }
+      .email-link svg { display: none; }
+      footer { padding: 16px 0; }
+      @page { margin: 16mm; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip" href="#main">跳转至政策正文</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="云上寺庙，返回页首">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21 24 10l18 11H6ZM10 17l14-9 14 9M9 39h30M6 43h36M13 23v15m11-15v15m11-15v15M10 27h28"/><path d="M21 7h6M24 4v3"/></svg>
+        <span><span class="brand-title">云上寺庙</span><span class="brand-en">CLOUD TEMPLE</span></span>
+      </a>
+      <span class="header-note">隐私与数据保护</span>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="hero">
+      <p class="eyebrow">PRIVACY POLICY</p>
+      <h1>隐私政策</h1>
+      <p class="intro">安静停留，也安心使用。<br>在这里，了解您的信息如何保存、使用与删除。</p>
+      <div class="meta">
+        <span>更新日期 <time datetime="2026-11-13">2026 年 11 月 13 日</time></span>
+        <span>生效日期 <time datetime="2026-11-13">2026 年 11 月 13 日</time></span>
+        <span class="package">com.zhang.cloudtemple</span>
+      </div>
+    </div>
+
+    <div class="layout">
+      <aside class="contents" aria-label="隐私政策目录">
+        <p class="contents-title">阅读目录</p>
+        <nav>
+          <ol>
+            <li><a href="#scope"><span>01</span>适用范围与开发者</a></li>
+            <li><a href="#data"><span>02</span>信息与使用目的</a></li>
+            <li><a href="#wishes"><span>03</span>私人心愿与本机存档</a></li>
+            <li><a href="#permissions"><span>04</span>设备权限与联网</a></li>
+            <li><a href="#sharing"><span>05</span>第三方与信息共享</a></li>
+            <li><a href="#controls"><span>06</span>保存期限与删除</a></li>
+            <li><a href="#security"><span>07</span>数据安全</a></li>
+            <li><a href="#children"><span>08</span>未成年人保护</a></li>
+            <li><a href="#updates"><span>09</span>政策更新</a></li>
+            <li><a href="#contact"><span>10</span>联系开发者</a></li>
+          </ol>
+        </nav>
+        <div class="contact-small">隐私相关问题<br><a href="mailto:zqiang1678@gmail.com">zqiang1678@gmail.com</a></div>
+      </aside>
+
+      <main id="main">
+        <div class="summary" aria-labelledby="summary-title">
+          <h2 id="summary-title">先了解与您最相关的几件事</h2>
+          <p>当前版本以本机离线体验为主，无需注册账号。私人心愿保存在您的设备上，不会作为云存档上传。当前未启用真实广告、支付或第三方行为分析服务。</p>
+          <div class="summary-tags" aria-label="当前版本的隐私特点"><span>心愿保存在本机</span><span>无需注册</span><span>无行为分析 SDK</span></div>
+        </div>
+
+        <section class="policy-section" id="scope" aria-labelledby="scope-title">
+          <div class="section-heading"><span class="section-num" aria-hidden="true">01</span><h2 id="scope-title">适用范围与开发者</h2></div>
+          <p>本政策适用于“云上寺庙”（Cloud Temple，以下简称“本应用”）当前提供的 Android 离线体验，以及本隐私政策网页。开发者 MENGQIANG ZHANG 在本政策中简称“我们”。</p>
+          <p>本政策说明本应用实际访问、使用、保存和处理的信息，以及您可以作出的选择。若后续版本引入账号、云同步、真实支付、广告或其他新的数据处理方式，我们会更新本政策，并在适用时另行说明和征得必要同意。</p>
+          <div class="owner">
+            <dl>
+              <dt>应用名称</dt><dd>云上寺庙 · Cloud Temple</dd>
+              <dt>Android 包名</dt><dd class="package">com.zhang.cloudtemple</dd>
+              <dt>开发者</dt><dd>MENGQIANG ZHANG</dd>
+              <dt>联系邮箱</dt><dd><a href="mailto:zqiang1678@gmail.com">zqiang1678@gmail.com</a></dd>
+            </dl>
+          </div>
+        </section>
+
+        <section class="policy-section" id="data" aria-labelledby="data-title">
+          <div class="section-heading"><span class="section-num" aria-hidden="true">02</span><h2 id="data-title">信息与使用目的</h2></div>
+          <p>为了记住您的选择并恢复体验，本应用在设备中保存以下信息。当前离线版本不会将这些本机记录主动上传至我们的服务器。</p>
+          <div class="data-grid">
+            <div class="data-card"><span class="label">偏好设置</span><h3>让下次打开时依然熟悉</h3><p>语言、声音、音量、触觉反馈、画质、季节、昼夜、镜头与计时设置，用于恢复您的使用偏好。</p></div>
+            <div class="data-card"><span class="label">体验进度</span><h3>记住您留下的片刻</h3><p>到访日期、互动次数、念珠进度、静坐时长、旅程印记、收藏、装饰与角色位置，用于展示个人记录和继续体验。</p></div>
+            <div class="data-card"><span class="label">私人心愿</span><h3>保存您主动写下的话</h3><p>心愿正文、灯笼样式、创建和修改时间，以及用于区分记录的本机标识，用于查看、编辑和删除心愿。</p></div>
+            <div class="data-card"><span class="label">联系与反馈</span><h3>回应您主动提出的问题</h3><p>若您通过邮件联系我们，我们会收到您提供的邮箱、问题描述和附件，仅用于沟通、处理请求及相关必要事项。</p></div>
+          </div>
+          <p>本应用不要求您提供真实姓名、手机号或身份证件，不读取通讯录、短信、通话记录、照片、精确位置，也不使用摄像头或麦克风。我们未在当前版本集成第三方用户行为分析 SDK，不出售您的个人信息。</p>
+          <p>本机存档中使用的随机标识用于区分存档、心愿或开发测试记录，不是广告标识符，也不用于跨应用追踪。</p>
+        </section>
+
+        <section class="policy-section" id="wishes" aria-labelledby="wishes-title">
+          <div class="section-heading"><span class="section-num" aria-hidden="true">03</span><h2 id="wishes-title">私人心愿与本机存档</h2></div>
+          <p><strong>心愿正文仅保存在应用的本机存储中，不会公开展示，也不包含在云存档上传字段中。</strong>我们不会将您写下的心愿提交给素材生成服务或用于人工智能模型训练。</p>
+          <p>本应用可以在设备内保存用于故障恢复的存档副本。您主动创建的“本机恢复副本”也保存在同一设备中，可能包含创建当时的心愿和其他存档内容，不属于跨设备云备份。</p>
+          <div class="note"><p><strong>关于删除与恢复：</strong>删除一条心愿会移除当前存档中的这条记录，但此前保存的本机恢复副本可能仍包含旧内容，恢复旧副本时可能重新出现。若希望一并移除本应用的全部本机副本，请按下文说明清除应用存储。</p></div>
+          <p>本应用已关闭 Android 自动备份。您自行使用的系统迁移工具、设备管理或调试工具可能由您或设备服务商另行控制，不属于本应用提供的云同步。</p>
+        </section>
+
+        <section class="policy-section" id="permissions" aria-labelledby="permissions-title">
+          <div class="section-heading"><span class="section-num" aria-hidden="true">04</span><h2 id="permissions-title">设备权限与联网</h2></div>
+          <p>当前 Android 应用声明的权限及用途如下。本机存档保存在应用自身的存储区域，无需读取您的共享相册或其他应用文件。</p>
+          <div class="permission-list">
+            <div class="permission"><strong>网络访问</strong><p>为可选联网功能保留网络访问能力。当前版本未配置可用的账号或云同步服务，核心场景、美术和音频随应用提供，离线体验无需联网。</p></div>
+            <div class="permission"><strong>网络 / Wi-Fi 状态</strong><p>允许引擎判断设备连接状态，不用于读取 Wi-Fi 密码、推断您的精确位置或建立广告画像。</p></div>
+            <div class="permission"><strong>振动</strong><p>在您开启“触觉反馈”时提供轻微振动，可在设置中关闭。</p></div>
+          </div>
+          <p>当前版本没有可用的账号注册、Google 登录、云同步、真实广告或真实支付服务。开发测试入口不会完成真实购买，也不会向广告网络发送广告请求。</p>
+        </section>
+
+        <section class="policy-section" id="sharing" aria-labelledby="sharing-title">
+          <div class="section-heading"><span class="section-num" aria-hidden="true">05</span><h2 id="sharing-title">第三方与信息共享</h2></div>
+          <p>当前离线版本不将您的本机存档或私人心愿提供给广告商或第三方分析服务。我们不会出售、出租您的个人信息，或用它进行跨应用营销追踪。</p>
+          <p>如果您通过 Google Play、设备系统、您选择的输入法或电子邮件服务使用相关功能，这些服务提供商会根据各自的隐私政策独立处理您与其服务之间的互动。您主动发送给我们的反馈由我们按本政策处理。</p>
+          <p>仅在处理您主动提出的请求确有必要，或者适用法律要求的情况下，我们才会在必要范围内处理或披露我们实际持有的相关信息。当前本机离线存档不会因本条说明而自动上传。</p>
+          <p>本网页不使用 Cookie、广告或访问分析脚本，不包含个人信息提交表单。若您通过在线托管版本访问本页，承载网页的服务可能为传输页面及安全防护处理 IP 地址、请求时间、浏览器信息等网络访问日志；具体处理方式应以实际托管服务的说明为准。</p>
+        </section>
+
+        <section class="policy-section" id="controls" aria-labelledby="controls-title">
+          <div class="section-heading"><span class="section-num" aria-hidden="true">06</span><h2 id="controls-title">保存期限与删除</h2></div>
+          <p>本机存档在您使用应用期间持续保存在设备上，直至您删除相关内容、清除应用存储或卸载应用。我们不为当前离线版本另行保留服务器存档。</p>
+          <ul>
+            <li><strong>查看、更正或删除心愿：</strong>在“心愿”页面进入“我的心愿”，选择对应记录的“编辑”或“删除”。</li>
+            <li><strong>管理个人统计：</strong>在“设置 → 隐私与备份”中关闭可选的“个人统计”。这不会清除历史记录，也不会停止保存使用所需的设置、体验进度和您主动保存的心愿。</li>
+            <li><strong>删除全部本机数据及副本：</strong>在 Android 系统设置中进入本应用的应用信息，选择“存储”中的“清除数据 / 清除存储”，或卸载本应用。系统菜单名称因设备而异。</li>
+            <li><strong>不同安装副本分别管理：</strong>如果您仍保留旧包名或其他独立安装版本，其存档彼此独立，需要分别清除；删除当前版本不会清除另一份安装中的数据。</li>
+            <li><strong>邮件反馈：</strong>对您主动提交的反馈，我们仅在处理问题、必要的后续沟通或法律要求的期限内保留；您可以通过下方邮箱提出查阅、更正或删除请求。</li>
+          </ul>
+          <div class="note"><p>清除全部存储或卸载后，本机心愿、恢复副本与体验进度可能无法恢复。请先确认是否仍需保留相关内容。</p></div>
+          <p>当前没有已启用的云账号，因此无需提交云账号注销请求即可删除当前本机数据。若您对数据处理有其他疑问，可联系开发者；我们会在适用法律要求的范围内处理您的请求。</p>
+        </section>
+
+        <section class="policy-section" id="security" aria-labelledby="security-title">
+          <div class="section-heading"><span class="section-num" aria-hidden="true">07</span><h2 id="security-title">数据安全</h2></div>
+          <p>本应用依靠 Android 的应用沙箱和设备访问控制保护本机存档，并限制云存档可包含的字段。当前版本没有对心愿正文提供额外的应用层加密，也不作端到端加密承诺。</p>
+          <p>请妥善保护您的设备和屏幕锁。共享设备、已解锁系统权限的设备，以及您授权使用的备份或调试工具，可能影响本机信息的保密性。与我们沟通时，无需提供账号密码、支付密码或身份证件等与问题无关的信息。</p>
+        </section>
+
+        <section class="policy-section" id="children" aria-labelledby="children-title">
+          <div class="section-heading"><span class="section-num" aria-hidden="true">08</span><h2 id="children-title">未成年人保护</h2></div>
+          <p>本应用主要面向成年用户，不主动收集儿童个人信息。未成年人应在监护人指导下使用，并避免在自由输入内容或反馈邮件中提交不必要的个人信息。监护人如认为我们收到需要处理的未成年人信息，可以通过联系邮箱提出请求。</p>
+        </section>
+
+        <section class="policy-section" id="updates" aria-labelledby="updates-title">
+          <div class="section-heading"><span class="section-num" aria-hidden="true">09</span><h2 id="updates-title">政策更新</h2></div>
+          <p>我们会根据应用功能和实际信息处理方式更新本政策，并在页面上标明更新和生效日期。若变更涉及新增收集、共享或处理目的，我们会在相关功能启用时作出说明，并在需要时取得您的同意。</p>
+        </section>
+
+        <section class="contact-card" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">10 · 联系开发者</h2>
+          <p>如果您希望了解本政策、行使相关数据权利，或反馈隐私问题，请联系：</p>
+          <p><strong>MENGQIANG ZHANG</strong></p>
+          <a class="email-link" href="mailto:zqiang1678@gmail.com?subject=Cloud%20Temple%20Privacy">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="m3 5 7 5 7-5"/></svg>
+            zqiang1678@gmail.com
+          </a>
+          <p class="contact-tip">建议在邮件中注明“云上寺庙隐私”，并说明相关问题或请求。请避免附上与处理问题无关的私人心愿或敏感信息。</p>
+        </section>
+
+        <div class="page-end"><a href="#top">返回页首 ↑</a><button class="print-button" id="print-policy" type="button">打印 / 保存为 PDF</button></div>
+      </main>
+    </div>
+  </div>
+
+  <footer><div class="wrap footer-inner"><span>© 2026 MENGQIANG ZHANG · 云上寺庙</span><span>隐私政策 · 2026.11.13</span></div></footer>
+  <script>
+    document.documentElement.classList.add('js');
+    document.getElementById('print-policy').addEventListener('click', function () { window.print(); });
+  </script>
+</body>
+</html>
